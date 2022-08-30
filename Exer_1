@@ -1,0 +1,76 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace POO_proj
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Retangulo area1;
+            area1 = new Retangulo();
+
+            Console.Write("Digite a base:");
+            area1.setA(double.Parse(Console.ReadLine()));
+
+            Console.Write("Digite a altura:");
+            area1.setB(double.Parse(Console.ReadLine()));
+
+            area1.calcularArea();
+
+            Console.WriteLine("A area do retangulo:{0}",
+                area1.getArea());
+
+        }
+    }
+}
+
+//Classe
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace POO_proj
+{
+    internal class Retangulo
+    {
+        private double a;
+        private double b;
+        private double area;
+
+        public void setA(double n)
+        {
+            a = n;
+        }
+
+        public void setB(double n)
+        {
+            b = n;
+        }
+
+        public double getA()
+        {
+            return a;
+        }
+
+        public double getB()
+        {
+            return b;
+        }
+
+        public double getArea()
+        {
+            return area;
+        }
+
+        public void calcularArea()
+        {
+            area = a * b;
+        }
+    }
+}
