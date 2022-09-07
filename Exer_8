@@ -1,0 +1,84 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace exer8
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            Numero compara;
+            compara = new Numero(); 
+
+            Console.Write("Digite o primeiro valor:");
+            compara.setP(int.Parse(Console.ReadLine()));
+
+            Console.WriteLine("Digite o segundo valor:");
+            compara.setS(int.Parse(Console.ReadLine()));
+
+            compara.compararNumero();
+
+            Console.WriteLine("O maior valor é: {0}", compara.getMM());
+        }
+    }
+}
+
+- Classe:
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace exer8
+{
+    internal class Numero
+    {
+        private int p;
+        private int s;
+        private int mm;
+
+
+        public void setP(int n)
+        {
+            p = n;
+        }
+
+        public void setS(int n)
+        {
+            s = n;
+        }
+
+        public int getP()
+        {
+            return p;
+        }
+
+        public int getS()
+        {
+            return s;
+        }
+
+        public int getMM()
+        {
+            return mm;
+        }
+
+        public void compararNumero()
+        {
+            if (p > s)
+            {
+                mm = p;
+            }
+            else
+            {
+                mm = s;
+            }
+
+        }
+    }
+}
