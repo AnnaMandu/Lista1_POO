@@ -20,8 +20,6 @@ namespace exer9
             compara.setS(int.Parse(Console.ReadLine()));
 
             compara.compararNumero();
-
-            Console.WriteLine();
         }
     }
 }
@@ -65,7 +63,7 @@ namespace exer9
         {
             if (p > s)
             {
-                Console.WriteLine("O maior valor é:", p);
+                Console.WriteLine("O maior valor é:{0}", p);
             }
             else
             {
@@ -75,7 +73,7 @@ namespace exer9
                 }
                 else
                 {
-                    Console.WriteLine("O maior valor é:", s);
+                    Console.WriteLine("O maior valor é:{0}", s);
                 }
             }
         }
